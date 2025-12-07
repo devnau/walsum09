@@ -8,7 +8,15 @@ export type Match = {
   kickoff: string;
   venue: string;
   result?: string;
+  /** Preformatted date string using Europe/Berlin to avoid timezone drift. */
+  dateLabel: string;
 };
+
+const berlinDateFormatter = new Intl.DateTimeFormat('de-DE', {
+  timeZone: 'Europe/Berlin'
+});
+
+const formatMatchDate = (isoDate: string) => berlinDateFormatter.format(new Date(isoDate));
 
 export const matches: Match[] = [
   {
@@ -18,6 +26,7 @@ export const matches: Match[] = [
     home: true,
     competition: 'Niederrheinliga',
     date: '2024-07-20',
+    dateLabel: formatMatchDate('2024-07-20'),
     kickoff: '15:00',
     venue: 'Sportpark Driesenbusch',
     result: '3:1'
@@ -29,6 +38,7 @@ export const matches: Match[] = [
     home: false,
     competition: 'Niederrheinliga',
     date: '2024-07-27',
+    dateLabel: formatMatchDate('2024-07-27'),
     kickoff: '18:30',
     venue: 'Dietzbach Arena'
   },
@@ -39,6 +49,7 @@ export const matches: Match[] = [
     home: true,
     competition: 'Landesliga',
     date: '2024-07-21',
+    dateLabel: formatMatchDate('2024-07-21'),
     kickoff: '11:00',
     venue: 'Kunstrasen Platz 2',
     result: '2:0'

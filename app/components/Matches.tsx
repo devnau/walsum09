@@ -21,7 +21,7 @@ export function Matches() {
               </div>
             </div>
             <div style={{ textAlign: 'right' }}>
-              <div style={{ fontWeight: 700 }}>{new Date(match.date).toLocaleDateString('de-DE')}</div>
+              <div style={{ fontWeight: 700 }}>{match.dateLabel}</div>
               <div style={{ color: 'var(--muted)', fontSize: 13 }}>
                 {match.kickoff} Uhr · {match.venue}
               </div>
