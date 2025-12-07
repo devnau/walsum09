@@ -8,4 +8,5 @@ Dieses Repo sammelt den Plan für das Redesign der Vereinswebseite walsum09-fuss
 ## Nächste Schritte
 - Wireframes für Kernseiten erstellen.
 - CMS-Prototype (Auth + News-CRUD) aufsetzen und evaluieren.
+- Proof-of-Concept für Spielpläne via fussball.de-API (Abruf, Normalisierung, Caching).
 - Hosting-/Provider-Entscheidungen finalisieren.

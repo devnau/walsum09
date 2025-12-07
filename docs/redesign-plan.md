@@ -10,7 +10,7 @@
 - **Startseite**: Hero mit Spielplan-Highlight, Shortcuts (Mitglied werden, Spieltagsheft), Schnellzugriff auf News, Ergebnisse, kommende Spiele, Sponsoren-Teaser.
 - **Teams**: Übersicht aller Mannschaften, Detailseite mit Kader, Trainerteam, Tabelle, Spielplan, Trainingszeiten, Galerie.
 - **News & Spielberichte**: Kategorien, Tagging, Teaser-Bilder, Lesezeit, Related Posts.
-- **Spielbetrieb**: Tabellen/Ergebnisse per Schnittstelle (DFBnet/Fußball.de-Embed oder API) plus Heimspielkalender.
+- **Spielbetrieb**: Tabellen/Ergebnisse per fussball.de-API (Pflicht, Embed nur Fallback) plus Heimspielkalender.
 - **Verein**: Historie, Vorstand, Ansprechpartner, Satzung/Downloads.
 - **Mitmachen**: Mitgliedschaft, Jugend, Volunteers, Spenden/Sponsoring.
 - **Partner & Sponsoren**: Logo-Karussell, Detailseiten, Downloadbereich (Mediadaten).
@@ -33,7 +33,7 @@
 - **Caching**: ISR/Route-Cache, Redis (Upstash) für Spielplan-APIs.
 
 ## Datenmodell (Auszug)
-- **Team**: Name, Liga, Saison, Altersklasse, Trainer:in, Trainingszeiten, Plätze, Kontakte, Tabelle/Ergebnis-Feeds.
+- **Team**: Name, Liga, Saison, Altersklasse, Trainer:in, Trainingszeiten, Plätze, Kontakte, Tabelle/Ergebnis-Feeds, fussball.de-Team-ID.
 - **Spiel**: Heim/Auswärts, Gegner, Wettbewerb, Datum/Uhrzeit, Ort, Ergebnis, Bericht-Referenz, Highlight-Status.
 - **News/Artikel**: Titel, Slug, Kategorie/Tags, Teaser, Inhalt (Richtext/MDX), Autor:in, Veröffentlichungsdatum, Status (Draft/Live), Hero-Bild.
 - **Person**: Name, Rolle, Foto, Kontakt, Vita.
@@ -52,9 +52,16 @@
 - Vorschau-Modus (Draft Preview) mit signierten Tokens.
 
 ## Integrationen
-- Fußball.de/DFBnet-Embeds oder API-Bridge für Tabellen & Ergebnisse.
+- Fußball.de/DFBnet-API für Spielpläne/Tabellen (Pflichtvorgabe); gecacht über Redis/ISR.
 - Newsletter (Mailchimp/Brevo), Social Sharing (OG/Twitter Cards), WebP/Favicons.
 - Webhooks für Social-Publishing oder InDesign-Exports für Stadionzeitung.
+
+### Spielplan-Integration (fussball.de API)
+- Datenquelle: https://www.fussball.de/homepage#!/ (offizielle API-Endpunkte, ggf. authentifiziert via Token/Team-ID).
+- Architektur: API-Routen/Server Actions ziehen Spielpläne & Tabellen je Team → Normalisierung in internes Schema → Cache (Redis/ISR) → UI-Komponenten (Karten, Tabellen, Kalender-Feeds).
+- Aktualisierung: On-demand revalidate nach Spielende oder manuell aus CMS antriggern; Fallback auf statische Daten bei API-Downtime.
+- Sicherheit & Limits: Rate-Limiting pro Team/Endpoint, Logging von Fehlern und Responsezeiten.
+- Mapping: Team-Slug ↔ fussball.de-Team-ID im CMS hinterlegt, damit Redakteur:innen Zuordnung pflegen können.
 
 ## Sicherheit & Rechtliches
 - HTTPS, Rate Limiting, Audit-Logs, 2FA optional.
@@ -71,7 +78,7 @@
 ## Offene Entscheidungen
 - Exakte Provider-Wahl (Auth, DB, Storage) abhängig von Budget/Hostingpräferenzen.
 - Editor-Stack (MDX + Custom Blocks vs. TipTap) finalisieren.
-- Umfang automatischer Schnittstellen zu Fußball.de (Embed vs. gecachte API).
+- Umfang automatischer Schnittstellen zu Fußball.de geklärt (API-first, Embed nur als Fallback) → Quotas/Token-Beschaffung noch abstimmen.
 
 ## Nächste Schritte
 - Wireframes für Startseite, Team-Detail, News-Listing, Sponsorenseite.
