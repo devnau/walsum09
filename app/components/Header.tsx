@@ -4,10 +4,10 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
-  { href: '#news', label: 'News' },
-  { href: '#teams', label: 'Teams' },
-  { href: '#spielplan', label: 'Spielplan' },
-  { href: '#sponsoren', label: 'Sponsoren' }
+  { hash: 'news', label: 'News' },
+  { hash: 'teams', label: 'Teams' },
+  { hash: 'spielplan', label: 'Spielplan' },
+  { hash: 'sponsoren', label: 'Sponsoren' }
 ];
 
 export function Header() {
@@ -25,11 +25,15 @@ export function Header() {
       </div>
       <nav className="nav-links" aria-label="Hauptnavigation">
         {navItems.map((item) => (
-          <Link key={item.href} href={isHome ? item.href : `/${item.href}`}>
+          <Link
+            key={item.hash}
+            href={{ pathname: '/', hash: item.hash }}
+            scroll={isHome}
+          >
             {item.label}
           </Link>
         ))}
-        <Link href="#kontakt" className="btn btn-secondary">
+        <Link href={{ pathname: '/', hash: 'kontakt' }} className="btn btn-secondary">
           Kontakt
         </Link>
       </nav>
