@@ -1,0 +1,10 @@
+{
+  "name": "walsum09-web",
+  "compatibility_date": "2025-02-28",
+  "assets": {
+    "directory": "./out"
+  },
+  "build": {
+    "command": "npm install && npm run build"
+  }
+}
