@@ -4,16 +4,16 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const navItems = [
-  { hash: 'news', label: 'News' },
-  { hash: 'teams', label: 'Teams' },
-  { hash: 'spielplan', label: 'Spielplan' },
-  { hash: 'sponsoren', label: 'Sponsoren' },
+  { href: '/', label: 'Start' },
+  { href: '/news', label: 'News' },
+  { href: '/teams', label: 'Teams' },
+  { href: '/spielplan', label: 'Spielplan' },
+  { href: '/sponsoren', label: 'Sponsoren' },
   { href: '/verein', label: 'Verein' }
 ];
 
 export function Header() {
   const pathname = usePathname();
-  const isHome = pathname === '/';
 
   return (
     <header>
@@ -26,16 +26,15 @@ export function Header() {
       </div>
       <nav className="nav-links" aria-label="Hauptnavigation">
         {navItems.map((item) => {
-          const href = item.hash ? { pathname: '/', hash: item.hash } : item.href ?? '/';
-          const scroll = item.hash ? isHome : true;
+          const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
 
           return (
-            <Link key={item.label} href={href} scroll={scroll}>
+            <Link key={item.label} href={item.href} className={`nav-link${isActive ? ' active' : ''}`}>
               {item.label}
             </Link>
           );
         })}
-        <Link href={{ pathname: '/', hash: 'kontakt' }} className="btn btn-secondary">
+        <Link href="/kontakt" className="btn btn-secondary">
           Kontakt
         </Link>
       </nav>

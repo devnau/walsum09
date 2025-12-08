@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { sponsors } from '@/data/sponsors';
 
 export function Sponsors() {
@@ -5,9 +7,9 @@ export function Sponsors() {
     <section id="sponsoren">
       <div className="section-title">
         <h2>Partner & Sponsoren</h2>
-        <a className="badge" href="#kontakt">
+        <Link className="badge" href="/sponsoren">
           Mediadaten anfragen
-        </a>
+        </Link>
       </div>
       <div className="grid cards">
         {sponsors.map((sponsor) => (

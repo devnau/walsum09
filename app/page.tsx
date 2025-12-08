@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { Matches } from './components/Matches';
@@ -13,7 +15,7 @@ export default function HomePage() {
         <Hero />
 
         <section id="teams">
-          <SectionTitle cta={<span className="badge">Trainer:innen gesucht</span>}>Teams & Programm</SectionTitle>
+          <SectionTitle cta={<Link href="/teams" className="badge">Trainer:innen gesucht</Link>}>Teams & Programm</SectionTitle>
           <div className="grid cards">
             <article className="card">
               <h3>Herren I</h3>
@@ -43,12 +45,16 @@ export default function HomePage() {
             <article className="card">
               <h3>Kontaktformular</h3>
               <p>Für Mitgliedschaften, Sponsoring oder Probetraining – wir melden uns in 24h.</p>
-              <button className="btn btn-primary">Nachricht senden</button>
+              <Link className="btn btn-primary" href="/kontakt">
+                Nachricht senden
+              </Link>
             </article>
             <article className="card">
               <h3>CMS Roadmap</h3>
               <p>Auth, News-CRUD, Media-Library, Fussball.de-API mit Redis Cache. Live-Preview im Aufbau.</p>
-              <button className="btn btn-secondary">Roadmap öffnen</button>
+              <a className="btn btn-secondary" href="https://github.com/" rel="noreferrer" target="_blank">
+                Roadmap öffnen
+              </a>
             </article>
           </div>
         </section>
@@ -56,9 +62,9 @@ export default function HomePage() {
       <footer>
         <div>© 2024 Walsum 09 – Rot-Weiß seit 1909.</div>
         <div style={{ display: 'flex', gap: 12 }}>
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
-          <a href="#">Socials</a>
+          <Link href="/impressum">Impressum</Link>
+          <Link href="/datenschutz">Datenschutz</Link>
+          <Link href="/kontakt">Kontakt</Link>
         </div>
       </footer>
     </>
