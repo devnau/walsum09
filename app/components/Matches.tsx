@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { matches } from '@/data/matches';
 
 export function Matches() {
@@ -5,9 +7,9 @@ export function Matches() {
     <section id="spielplan">
       <div className="section-title">
         <h2>Spielplan Highlights</h2>
-        <a href="#" className="badge">
+        <Link href="/spielplan" className="badge">
           fussball.de-Feed (PoC)
-        </a>
+        </Link>
       </div>
       <ul className="list">
         {matches.map((match) => (

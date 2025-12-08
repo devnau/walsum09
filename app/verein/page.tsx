@@ -167,9 +167,9 @@ export default function VereinPage() {
       <footer>
         <div>© 2024 Walsum 09 – Rot-Weiß seit 1909.</div>
         <div style={{ display: 'flex', gap: 12 }}>
-          <a href="#">Impressum</a>
-          <a href="#">Datenschutz</a>
-          <a href="#">Socials</a>
+          <a href="/impressum">Impressum</a>
+          <a href="/datenschutz">Datenschutz</a>
+          <a href="/kontakt">Kontakt</a>
         </div>
       </footer>
     </>

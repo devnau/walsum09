@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 import { news } from '@/data/news';
 
 export function NewsList() {
@@ -5,7 +7,9 @@ export function NewsList() {
     <section id="news">
       <div className="section-title">
         <h2>News & Spielberichte</h2>
-        <span className="badge">CMS-Preview</span>
+        <Link href="/news" className="badge">
+          Alle Artikel
+        </Link>
       </div>
       <div className="grid cards">
         {news.map((item) => (
