@@ -7,7 +7,8 @@ const navItems = [
   { hash: 'news', label: 'News' },
   { hash: 'teams', label: 'Teams' },
   { hash: 'spielplan', label: 'Spielplan' },
-  { hash: 'sponsoren', label: 'Sponsoren' }
+  { hash: 'sponsoren', label: 'Sponsoren' },
+  { href: '/verein', label: 'Verein' }
 ];
 
 export function Header() {
@@ -24,15 +25,16 @@ export function Header() {
         </div>
       </div>
       <nav className="nav-links" aria-label="Hauptnavigation">
-        {navItems.map((item) => (
-          <Link
-            key={item.hash}
-            href={{ pathname: '/', hash: item.hash }}
-            scroll={isHome}
-          >
-            {item.label}
-          </Link>
-        ))}
+        {navItems.map((item) => {
+          const href = item.hash ? { pathname: '/', hash: item.hash } : item.href ?? '/';
+          const scroll = item.hash ? isHome : true;
+
+          return (
+            <Link key={item.label} href={href} scroll={scroll}>
+              {item.label}
+            </Link>
+          );
+        })}
         <Link href={{ pathname: '/', hash: 'kontakt' }} className="btn btn-secondary">
           Kontakt
         </Link>
