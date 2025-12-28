@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="de" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spielplan | Walsum 09</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="index.html">
+          <img class="logo" src="images/logo_walsum09.png" alt="Walsum 09 Logo" />
+        </a>
+        <nav class="nav nav--desktop">
+          <a href="index.html">Start</a>
+          <a class="nav--active" href="spielplan.html">Spielplan</a>
+          <a href="teams.html">Teams</a>
+          <a href="verein.html">Verein</a>
+          <a href="partner.html">Partner</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <div class="topbar__actions">
+          <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navDrawer">
+            <span class="nav-toggle__bars"><span></span></span>
+            <span class="sr-only">Menü</span>
+          </button>
+          <button class="pill pill--toggle" id="themeToggle" type="button" aria-pressed="false">Dunkel</button>
+        </div>
+        <div class="nav-drawer" id="navDrawer">
+          <nav class="nav nav--drawer">
+            <a href="index.html">Start</a>
+            <a class="nav--active" href="spielplan.html">Spielplan</a>
+            <a href="teams.html">Teams</a>
+            <a href="verein.html">Verein</a>
+            <a href="partner.html">Partner</a>
+            <a href="kontakt.html">Kontakt</a>
+          </nav>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+      </div>
+    </div>
+
+    <header class="hero hero--slim">
+      <div class="hero__layer hero__layer--glow"></div>
+      <div class="hero__grid">
+        <div class="hero__content">
+          <div class="badge">Matchday</div>
+          <h1>Spielplan</h1>
+          <p>Alle Spiele unserer Senioren- und Jugendteams mit Terminen, Anstoßzeiten und Orten – für dich im Überblick.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section__header container">
+          <div>
+            <p class="eyebrow">Nächste Partien</p>
+            <h2>Senioren</h2>
+            <p>Hier siehst du die anstehenden Spiele der ersten und zweiten Herrenmannschaft.</p>
+          </div>
+        </div>
+        <div class="cards container cards--grid">
+          <article class="card">
+            <div class="card__line">Landesliga • Heim</div>
+            <h3>Walsum 09 vs. SV Genc Osman</h3>
+            <p class="card__meta">Sa, 14:00 Uhr • Driesenbusch</p>
+            <div class="card__footer">
+              <span class="tag">Herren I</span>
+              <button class="pill">Ticket sichern</button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__line">Kreisliga • Auswärts</div>
+            <h3>TuS Mündelheim vs. Walsum 09</h3>
+            <p class="card__meta">So, 11:00 Uhr • Duisburg</p>
+            <div class="card__footer">
+              <span class="tag">Herren II</span>
+              <button class="pill">Livestream</button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__line">Freundschaft • Heim</div>
+            <h3>Walsum 09 vs. SV Beeckerwerth</h3>
+            <p class="card__meta">Mi, 19:00 Uhr • Platz 1</p>
+            <div class="card__footer">
+              <span class="tag">Alte Herren</span>
+              <button class="pill">Spielinfo</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--accent">
+        <div class="container">
+          <div class="section__header">
+            <div>
+              <p class="eyebrow">Jugend</p>
+              <h2>Nachwuchs-Spielplan</h2>
+              <p>Du findest hier Turniere, Ligaspiele und Testspiele unserer Junioren.</p>
+            </div>
+          </div>
+          <div class="cards cards--grid">
+            <article class="card">
+              <div class="card__line">Kreisklasse • Heim</div>
+              <h3>Walsum 09 U17 vs. SV Beeckerwerth</h3>
+              <p class="card__meta">Mi, 18:30 Uhr • Platz 2</p>
+              <div class="card__footer">
+                <span class="tag">U17</span>
+                <button class="pill">Vorschau</button>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__line">Turnier</div>
+              <h3>U13 – Sommer-Cup Oberhausen</h3>
+              <p class="card__meta">Sa, 10:00 Uhr • Sportpark OB</p>
+              <div class="card__footer">
+                <span class="tag">U13</span>
+                <button class="pill">Spielplan</button>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card__line">Freundschaft • Auswärts</div>
+              <h3>SC Union Hamborn vs. Walsum 09 U9</h3>
+              <p class="card__meta">Fr, 17:00 Uhr • Hamborn</p>
+              <div class="card__footer">
+                <span class="tag">U9</span>
+                <button class="pill">Details</button>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Plätze & Adressen</p>
+            <h2>Spielorte im Überblick</h2>
+            <p>Heimspiele findest du auf der Sportanlage Driesenbusch. Bitte stimme Auswärtsspiele immer mit deiner Trainerin oder deinem Trainer ab.</p>
+          </div>
+          <div class="panel">
+            <div class="panel__header">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="panel__body">
+              <ul class="times">
+                <li><span>Driesenbusch</span><span>Im Driesenbusch 43</span></li>
+                <li><span>Platz 1</span><span>Hauptspielfeld</span></li>
+                <li><span>Platz 2</span><span>Kunstrasen</span></li>
+              </ul>
+              <p class="hint">Fragen zum Spielbetrieb? <a class="link" href="kontakt.html">Melde dich kurz</a>.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>
+        <img class="logo" src="images/logo_walsum09.png" alt="Walsum 09 Logo" />
+          <p>SV Walsum 09 – Fußball mit Herz seit 1909.</p>
+        </div>
+        <div class="footer__links">
+          <a href="verein.html">Verein</a>
+          <a href="teams.html">Teams</a>
+          <a href="partner.html">Partner</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

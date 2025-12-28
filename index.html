@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="de" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Walsum 09 | Offizielle Website</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="index.html">
+          <img class="logo" src="images/logo_walsum09.png" alt="Walsum 09 Logo" />
+        </a>
+        <nav class="nav nav--desktop">
+          <a class="nav--active" href="index.html">Start</a>
+          <a href="spielplan.html">Spielplan</a>
+          <a href="teams.html">Teams</a>
+          <a href="verein.html">Verein</a>
+          <a href="partner.html">Partner</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+        <div class="topbar__actions">
+          <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navDrawer">
+            <span class="nav-toggle__bars"><span></span></span>
+            <span class="sr-only">Menü</span>
+          </button>
+          <button class="pill pill--toggle" id="themeToggle" type="button" aria-pressed="false">Dunkel</button>
+        </div>
+        <div class="nav-drawer" id="navDrawer">
+          <nav class="nav nav--drawer">
+            <a class="nav--active" href="index.html">Start</a>
+            <a href="spielplan.html">Spielplan</a>
+            <a href="teams.html">Teams</a>
+            <a href="verein.html">Verein</a>
+            <a href="partner.html">Partner</a>
+            <a href="kontakt.html">Kontakt</a>
+          </nav>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+      </div>
+    </div>
+
+    <header class="hero">
+      <div class="hero__layer hero__layer--glow"></div>
+      <div class="hero__grid">
+        <div class="hero__content">
+          <div class="badge">Tradition seit 1909</div>
+          <h1>SV Walsum 09</h1>
+          <p>Erlebe leidenschaftlichen Fußball an der Rhein-Ruhr. Fühl dich im Driesenbusch zuhause – für Verein, Familie und Freunde.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="spielplan.html">Zu den Spielen</a>
+            <a class="btn btn--ghost" href="teams.html">Mannschaften</a>
+          </div>
+          <div class="hero__meta">
+            <div>
+              <span class="meta__label">Heimstätte</span>
+              <span class="meta__value">Sportanlage Driesenbusch</span>
+            </div>
+            <div>
+              <span class="meta__label">Mitglieder</span>
+              <span class="meta__value">450+</span>
+            </div>
+            <div>
+              <span class="meta__label">Teams</span>
+              <span class="meta__value">Herren, Jugend, Damen, Alte Herren</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="section__header container">
+          <div>
+            <p class="eyebrow">Direkt einsteigen</p>
+            <h2>Was suchst du?</h2>
+            <p>Spieltermine, Probetraining oder Infos zum Verein – hier geht’s schnell weiter.</p>
+          </div>
+        </div>
+        <div class="cards container cards--grid">
+          <article class="card">
+            <div class="card__line">Spieltag</div>
+            <h3>Spielplan & Ergebnisse</h3>
+            <p class="card__meta">Nächste Partien unserer Senioren- und Jugendteams.</p>
+            <div class="card__footer">
+              <span class="tag">Matchday</span>
+              <a class="pill" href="spielplan.html">Alle Spiele</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__line">Teams</div>
+            <h3>Von Minis bis Alte Herren</h3>
+            <p class="card__meta">Alle Mannschaften, Trainer:innen, Trainingszeiten.</p>
+            <div class="card__footer">
+              <span class="tag">Kader</span>
+              <a class="pill" href="teams.html">Zu den Teams</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__line">Verein</div>
+            <h3>Mehr über Walsum 09</h3>
+            <p class="card__meta">Geschichte, Werte, Jugendförderung und unsere Anlage.</p>
+            <div class="card__footer">
+              <span class="tag">Story</span>
+              <a class="pill" href="verein.html">Verein ansehen</a>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card__line">Support</div>
+            <h3>Partner & Sponsoren</h3>
+            <p class="card__meta">Regionale Unterstützung, Pakete und Kontakt.</p>
+            <div class="card__footer">
+              <span class="tag">Support</span>
+              <a class="pill" href="partner.html">Partner werden</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section section--split">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Unser Zuhause</p>
+            <h2>Sportanlage Driesenbusch</h2>
+            <p>Du bekommst zwei Plätze, moderne Gastronomie und Raum für Jugend, Damen, Herren und Alte Herren. Wir leben Verein – mit Ehrenamt, Gemeinschaft und klarer Spielidee.</p>
+            <div class="badge badge--light">Adresse: Im Driesenbusch 43, 47179 Duisburg</div>
+          </div>
+          <div class="panel">
+            <div class="panel__header">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="panel__body">
+              <h3>Öffnungszeiten Geschäftsstelle</h3>
+              <ul class="times">
+                <li><span>Dienstag</span><span>18:00 – 20:00</span></li>
+                <li><span>Donnerstag</span><span>18:00 – 20:00</span></li>
+              </ul>
+              <p class="hint">Probetraining? Melde dich kurz per Mail oder über das Kontaktformular.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <p class="eyebrow">Zahlen, die zählen</p>
+          <h2>Walsum 09 in Kürze</h2>
+          <div class="stats">
+            <div class="stat">
+              <span class="stat__number">1909</span>
+              <span class="stat__label">Gründung</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">18</span>
+              <span class="stat__label">Teams</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">600</span>
+              <span class="stat__label">Ø Zuschauer Heim</span>
+            </div>
+            <div class="stat">
+              <span class="stat__number">45</span>
+              <span class="stat__label">Trainer:innen & Betreuer</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>
+        <img class="logo" src="images/logo_walsum09.png" alt="Walsum 09 Logo" />
+          <p>SV Walsum 09 – Fußball mit Herz seit 1909.</p>
+        </div>
+        <div class="footer__links">
+          <a href="verein.html">Verein</a>
+          <a href="teams.html">Teams</a>
+          <a href="partner.html">Partner</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

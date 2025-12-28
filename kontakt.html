@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de" class="theme-dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kontakt | Walsum 09</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page">
+    <div class="topbar">
+      <div class="container topbar__inner">
+        <a class="brand" href="index.html">
+          <img class="logo" src="images/logo_walsum09.png" alt="Walsum 09 Logo" />
+        </a>
+        <nav class="nav nav--desktop">
+          <a href="index.html">Start</a>
+          <a href="spielplan.html">Spielplan</a>
+          <a href="teams.html">Teams</a>
+          <a href="verein.html">Verein</a>
+          <a href="partner.html">Partner</a>
+          <a class="nav--active" href="kontakt.html">Kontakt</a>
+        </nav>
+        <div class="topbar__actions">
+          <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navDrawer">
+            <span class="nav-toggle__bars"><span></span></span>
+            <span class="sr-only">Menü</span>
+          </button>
+          <button class="pill pill--toggle" id="themeToggle" type="button" aria-pressed="false">Dunkel</button>
+        </div>
+        <div class="nav-drawer" id="navDrawer">
+          <nav class="nav nav--drawer">
+            <a href="index.html">Start</a>
+            <a href="spielplan.html">Spielplan</a>
+            <a href="teams.html">Teams</a>
+            <a href="verein.html">Verein</a>
+            <a href="partner.html">Partner</a>
+            <a class="nav--active" href="kontakt.html">Kontakt</a>
+          </nav>
+        </div>
+        <div class="nav-overlay" id="navOverlay"></div>
+      </div>
+    </div>
+
+    <header class="hero hero--slim">
+      <div class="hero__layer hero__layer--glow"></div>
+      <div class="hero__grid">
+        <div class="hero__content">
+          <div class="badge">Kontakt</div>
+          <h1>So erreichst du uns</h1>
+          <p>Geschäftsstelle, Trainer:innen, Sponsoring – wir antworten schnell.</p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="section section--split">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Anschrift</p>
+            <h2>SV Walsum 09 e.V.</h2>
+            <p>Im Driesenbusch 43<br />47179 Duisburg</p>
+            <p>Telefon: 0203 123456<br />E-Mail: info@walsum09.de</p>
+            <p>Geschäftsstelle: dienstags & donnerstags 18:00–20:00 Uhr</p>
+            <div class="social">
+              <a href="#">Instagram</a>
+              <a href="#">Facebook</a>
+              <a href="#">Fupa</a>
+            </div>
+          </div>
+          <form class="form" action="#" method="post">
+            <label for="name">Name</label>
+            <input id="name" name="name" type="text" placeholder="Dein Name" required />
+            <label for="email">E-Mail</label>
+            <input id="email" name="email" type="email" placeholder="name@example.de" required />
+            <label for="msg">Nachricht</label>
+            <textarea id="msg" name="msg" rows="4" placeholder="Wie können wir dir helfen?" required></textarea>
+            <button class="btn btn--primary" type="submit">Nachricht senden</button>
+            <p class="hint">Wir antworten in der Regel innerhalb von 48 Stunden.</p>
+          </form>
+        </div>
+      </section>
+
+      <section class="section section--accent">
+        <div class="container split">
+          <div>
+            <p class="eyebrow">Sponsoring</p>
+            <h2>Interesse an einer Partnerschaft?</h2>
+            <p>Wir gestalten individuelle Pakete: Banden, Trikots, Events oder Social Media. Sprich uns einfach an.</p>
+            <div class="badge badge--light">Mail: sponsoring@walsum09.de</div>
+          </div>
+          <div class="panel">
+            <div class="panel__header">
+              <div class="dot"></div>
+              <div class="dot"></div>
+              <div class="dot"></div>
+            </div>
+            <div class="panel__body">
+              <h3>Direkter Draht</h3>
+              <p>Ruf gern an, nachdem du kurz per Mail Bescheid gegeben hast.</p>
+              <a class="btn btn--primary" href="mailto:sponsoring@walsum09.de">Mail an Sponsoring</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div>
+        <img class="logo" src="images/logo_walsum09.png" alt="Walsum 09 Logo" />
+          <p>SV Walsum 09 – Fußball mit Herz seit 1909.</p>
+        </div>
+        <div class="footer__links">
+          <a href="verein.html">Verein</a>
+          <a href="teams.html">Teams</a>
+          <a href="partner.html">Partner</a>
+          <a href="kontakt.html">Kontakt</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
